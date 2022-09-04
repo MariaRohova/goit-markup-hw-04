@@ -53,7 +53,7 @@ border-bottom: 1px solid #ECECEC;
 .section{
 padding: 94px 0;
 }
-.section:nth-child(4){
+.section:nth-child(5){
     padding-top: 0;
 }
 
@@ -132,8 +132,18 @@ margin: 32px 0;
     justify-content: flex-end;
     display: flex;
     margin-left: auto;
-    
     }
+
+.mail-img-svg::before,
+.phone-img-svg::before{
+    content: "";
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 16px;
+   height: 12px;
+   margin: 0 auto;
+}
 
 .contact-mail, .contact-phone{
     text-decoration: none;
@@ -269,14 +279,25 @@ margin-bottom:50px ;
     list-style: none;
 }
 
-.list-sociel-netwoorks{
+.list-social-netwoorks{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    color: #AFB1B8;
 }
 
-.team-sociel-netwoorks{
+.social-networks{
+
+}
+
+.link-social-icon
+{
+    color: #AFB1B8;
+    border-radius: 50%;
+}
+
+.team-social-netwoorks{
 width: 44px;
 height: 44px;
 display: flex;
@@ -325,11 +346,55 @@ text-align: center;
 letter-spacing: 0.03em;
 color: #212121;
 }
+.clients-list{
+display: flex;
+margin: 0 auto;
+gap: 30px;
+}
+
+.icon-clients{
+    width: 170px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #AFB1B8;
+}
+
+.clients-svg {
+    fill: currentColor;
+}
+
+.icon-clients:hover,
+.icon-clients:focus{
+    color: rgba(33, 150, 243, 1);
+    background-color:rgba(0, 0, 0, 0.2);
+    border: 1px solid;
+border-image-source: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+linear-gradient(0deg, #2196F3, #2196F3);
+
+
+}
+
+
+/*Footer*/
 
 .footer{
     background-color:#2F303A; 
     padding: 60px 0; 
+
 }
+footer .container
+{
+    align-items: baseline;
+    display: flex;
+}
+
+.footer-block-1 
+{
+margin-right: 70px;
+}
+
 .footer .logo-studio{
     color: #FFFFFF;
 
@@ -370,6 +435,39 @@ color: #212121;
     font-weight: 400;
     letter-spacing: inherit;
     color: rgba(255, 255, 255, 0.6);
+}
+
+.join{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+
+.footer .team-social-netwoorks
+{
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: FFFFFF;
+}
+
+footer .social-icon{
+}
+
+.footer .social-icon:hover,
+.footer .social-icon:focus
+{
+    background-color: 2196F3;
+}
+
+.team-social-netwoorks:focus,
+.team-social-netwoorks:hover
+{
+    background-color: 2196F3;
 }
 
 
