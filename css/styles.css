@@ -53,10 +53,16 @@ border-bottom: 1px solid #ECECEC;
 .section{
 padding: 94px 0;
 }
+.section:nth-child(2)
+{
+    padding-bottom: 0;
+}
+.section:nth-child(4){
+    background: rgba(245, 244, 250, 1);
+}
 .section:nth-child(5){
     padding-top: 0;
 }
-
 
 .nav-all{
     display:flex;
@@ -90,14 +96,8 @@ font-weight: 500;
 font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.02em;
-color: #212121;
 display:flex;
 margin: 32px 0;
-}
-
-.nav-list:hover::after{
-   color: #2196F3;
-
 }
 
 .header .container{
@@ -116,9 +116,15 @@ margin: 32px 0;
     height: 16px;
     margin-right: 50px;
 }
-.nav-link:hover{
 
+.nav-link:hover,
+.nav-link:focus,
+.mail-img-svg:hover,
+.phone-img-svg:focus
+{
+    color: rgba(33, 150, 243, 1);
 }
+
 
 
 .contacts{
@@ -129,20 +135,34 @@ margin: 32px 0;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    justify-content: flex-end;
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
     margin-left: auto;
     }
 
-.mail-img-svg::before,
-.phone-img-svg::before{
-    content: "";
-   display: inline-flex;
-   align-items: center;
-   justify-content: center;
-   width: 16px;
-   height: 12px;
-   margin: 0 auto;
+.contact-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: inherit;
+    gap: 10px;
+    }
+
+.mail-img-svg,
+.mail-img-svg {
+        display: flex;
+        justify-content: center;
+        color: inherit;
+    }
+
+.icon-mail{
+    width: 16px;
+    height: 12px;
+}
+.icon-phone{
+   width: 10px;
+   height: 16px;
 }
 
 .contact-mail, .contact-phone{
@@ -151,25 +171,25 @@ margin: 32px 0;
 }
 
 .contact-mail{
-color: #2196F3;
-margin-right: 50px;
+    color: #2196F3;
+    margin-right: 50px;
 }
 
 .contact-phone{
-color: #757575; 
+    color: #757575; 
 }
+
+/*HERO*/
 
 .hero{
 padding: 200px 0;
 background-image: linear-gradient(
     rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)
-), 
+    rgba(47, 48, 58, 0.4)), 
 url("../img/hero-Img.jpg");
 background-repeat: no-repeat;
 background-size: contain;
 max-width: 1600px;
-
 }
 
 .hero-title{
@@ -287,9 +307,6 @@ margin-bottom:50px ;
     color: #AFB1B8;
 }
 
-.social-networks{
-
-}
 
 .link-social-icon
 {
@@ -323,7 +340,6 @@ font-size: 16px;
 line-height: 1.18;
 text-align: center;
 color: #212121;
-margin-top: 30px;
 margin-bottom: 10px;
 }
 
@@ -345,36 +361,43 @@ line-height: 42px;
 text-align: center;
 letter-spacing: 0.03em;
 color: #212121;
+margin-bottom: 50px;
 }
+
 .clients-list{
 display: flex;
 margin: 0 auto;
 gap: 30px;
+
+
 }
 
 .icon-clients{
     width: 170px;
     height: 92px;
+    color: #AFB1B8;
+    border: 1px solid rgba(175, 177, 184, 1)
+    }
+
+.clients-svg{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #AFB1B8;
-}
-/*
-.clients-svg {
-    fill: currentColor;
+    border: 1px solid rgba(175, 177, 184, 1)
+    
+    color: inherit;
+    
 }
 
 .icon-clients:hover,
 .icon-clients:focus{
-    color: rgba(33, 150, 243, 1);
-    background-color:rgba(0, 0, 0, 0.2);
-    border: 1px solid;
-border-image-source: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    background-color:(0deg, #2196F3, #2196F3);
+    border: 1px solid #2196F3;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
 linear-gradient(0deg, #2196F3, #2196F3);
 
+
 }
-*/
 
 
 /*Footer*/
@@ -452,22 +475,24 @@ color: #FFFFFF;
 {
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
-    color: FFFFFF;
+
+    }
+
+.footer .link-social-icon {
+    display: flex;
+    justify-content: center;
+    color: inherit; 
 }
 
-footer .social-icon{
-}
 
-.footer .social-icon:hover,
-.footer .social-icon:focus
+.footer .team-social-networks:hover,
+.footer .team-social-networks:focus
 {
-    background-color: 2196F3;
-}
+    border-radius: 50%;
+    background-color: #2196F3;
+    color: #FFFFFF;
+    
 
-.team-social-netwoorks:focus,
-.team-social-netwoorks:hover
-{
-    background-color: 2196F3;
 }
 
 
@@ -493,7 +518,8 @@ visibility: hidden;
     
 }
 .portfolio-button {
-    gap: 8px
+    gap: 8px;
+    margin-bottom: 50px ;
 }
 
 .portfolio-pagination:hover{
