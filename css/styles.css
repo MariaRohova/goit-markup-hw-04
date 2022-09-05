@@ -64,10 +64,6 @@ padding: 94px 0;
     padding-top: 0;
 }
 
-.nav-all{
-    display:flex;
-}
-
 .logo{
 
     margin: 24px 93px 25px 0;
@@ -91,7 +87,8 @@ line-height: 1.19;
 color: #000000;
 }
 
-.nav{list-style: none;
+.nav{
+list-style: none;
 font-weight: 500;
 font-size: 14px;
 line-height: 1.14;
@@ -119,8 +116,10 @@ margin: 32px 0;
 
 .nav-link:hover,
 .nav-link:focus,
-.mail-img-svg:hover,
-.phone-img-svg:focus
+.contact-mail:hover,
+.contact-mail:focus,
+.contact-phone:hover,
+.contact-phone:focus
 {
     color: rgba(33, 150, 243, 1);
 }
@@ -146,38 +145,37 @@ margin: 32px 0;
     justify-content: center;
     align-items: center;
     color: inherit;
-    gap: 10px;
     }
-
-.mail-img-svg,
-.mail-img-svg {
-        display: flex;
-        justify-content: center;
-        color: inherit;
-    }
-
+    
 .icon-mail{
     width: 16px;
     height: 12px;
+
 }
 .icon-phone{
    width: 10px;
    height: 16px;
+   
 }
+
+
 
 .contact-mail, .contact-phone{
     text-decoration: none;
+    fill: currentColor;
     
 }
 
 .contact-mail{
-    color: #2196F3;
-    margin-right: 50px;
+    color:  #757575;
+    margin-right: 30px;
 }
 
 .contact-phone{
     color: #757575; 
 }
+
+
 
 /*HERO*/
 
@@ -222,6 +220,7 @@ margin: 0 auto;
     margin-top: 30px;
     justify-content: center;
     align-items: center;
+    border: none;
 
 }
 
@@ -252,7 +251,6 @@ margin-bottom: 30px;
 .icon{
     width: 70px;
     height: 70px;
-   
 }
 
 .subtitle-flex,
@@ -299,36 +297,50 @@ margin-bottom:50px ;
     list-style: none;
 }
 
+
 .list-social-netwoorks{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    color: #AFB1B8;
 }
 
-
-.link-social-icon
-{
-    color: #AFB1B8;
-    border-radius: 50%;
-}
-
-.team-social-netwoorks{
+.social-networks{
 width: 44px;
 height: 44px;
 display: flex;
 justify-content: center;
 align-items: center;
-gap: 10px;
+color: #AFB1B8;
 }
+
+.link-social-icon{
+    fill: currentColor;
+}
+
+.social-networks:hover,
+.social-networks:focus
+{
+    border-radius: 50%;
+    background: rgba(33, 150, 243, 1);
+    color: #FFFFFF;
+}
+
 
 .team-list{
 box-shadow: 0px 2px 1px 0px #00000033;
 box-shadow: 0px 1px 1px 0px #00000024;
 box-shadow: 0px 1px 3px 0px #0000001F;
-
+color: #AFB1B8 ;
 }
+
+.list-social-netwoorks
+{color: #AFB1B8 }
+
+.team-social-netwoorks{
+  fill: currentColor;  
+}
+
 
 .team-img-text{
     padding: 30px 0;
@@ -368,36 +380,43 @@ margin-bottom: 50px;
 display: flex;
 margin: 0 auto;
 gap: 30px;
+}
+
+.clients-item{
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+
+.clients-svg {
+    width: 170px;
+    height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #AFB1B8;
 
 
 }
 
 .icon-clients{
-    width: 170px;
-    height: 92px;
-    color: #AFB1B8;
-    border: 1px solid rgba(175, 177, 184, 1)
+    fill: currentColor;
     }
 
-.clients-svg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid rgba(175, 177, 184, 1)
-    
-    color: inherit;
-    
-}
-
+.clients-svg:hover,
+.clients-svg:focus,
 .icon-clients:hover,
 .icon-clients:focus{
-    background-color:(0deg, #2196F3, #2196F3);
     border: 1px solid #2196F3;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    color: #2196F3;
+    background: rgba(0, 0, 0, 0.2);
+    border-image-source: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
 linear-gradient(0deg, #2196F3, #2196F3);
-
-
 }
+
+
+
+
+
 
 
 /*Footer*/
@@ -437,7 +456,6 @@ margin-right: 70px;
     font-size: 14px;
     line-height: 1.71;
     color: #FFFFFF;
-    pa: 0 auto;
 }
 
 .footer-contact{
@@ -471,31 +489,19 @@ text-transform: uppercase;
 color: #FFFFFF;
 }
 
-.footer .team-social-netwoorks
+    footer .team-social-netwoorks
 {
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
-
     }
+
 
 .footer .link-social-icon {
     display: flex;
     justify-content: center;
     color: inherit; 
 }
-
-
-.footer .team-social-networks:hover,
-.footer .team-social-networks:focus
-{
-    border-radius: 50%;
-    background-color: #2196F3;
-    color: #FFFFFF;
     
-
-}
-
-
 
 
 
@@ -520,6 +526,11 @@ visibility: hidden;
 .portfolio-button {
     gap: 8px;
     margin-bottom: 50px ;
+}
+
+.portfolio-pagination{
+    border: none;
+    border-radius: 4%;
 }
 
 .portfolio-pagination:hover{
